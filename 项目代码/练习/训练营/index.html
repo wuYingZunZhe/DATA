@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="cn">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	*{margin:0;padding:0}
+	body{
+		/*文本居中*/
+		text-align:center;
+		/*背景颜色*/
+		background:#eee;
+	}
+	.center{
+		/*绝对定位*/
+		position:absolute;
+		top:50%;
+        left:50%;
+		/*宽度响应式布局，占全部父元素*/
+        width:100%;
+		/*以本身的长宽做参考实现居中*/
+        transform:translate(-50%,-50%);
+		/*文字水平居中*/
+        text-align: center;
+	}
+	.title{
+		/*字体颜色*/
+		color:red;
+		background:#ddd;
+		/*字体高度：目的是让文字垂直居中*/
+		height:200px;
+		width:100%;
+		/*字体大小*/
+		font-size:30px;
+		/*相对定位*/
+		position:relative;
+	}
+	h1{
+		
+	}
+	.container{
+		width:500px;
+		height:500px;
+		/*内容溢出：子元素内容超过父元素自动加滚动条*/
+		overflow:auto; 
+		/*上边距*/
+		margin-top:100px;
+		/*左边距*/
+		margin-left:700px;
+	}
+	.nav{
+		/*行内快*/
+		display:inline-block;
+		background:#ddd;		
+		width:2000px;
+		height:470px;
+		position:relative;		
+	}
+	.nav div{
+		width:1000px;
+		height:500px;
+	}
+	.nav  div{
+		/*display:inline-block;*/
+		/*改变盒子计算方式*/
+		box-sizing:border-box;
+		/*边框*/
+		border:1px solid red;
+		width:400px;
+		height:400px;
+		/*左外边距*/
+		margin-left:50px;
+		/*上外边距*/
+		margin-top:42px;
+		/*背景颜色*/
+		background:#ccc;
+		/*浮动：脱离默认文档流*/
+		float:left;	
+		/*字体颜色*/
+		color:green;
+		/*字体大小*/
+		font-size:50px;
+		/*上内边距*/
+		padding-top:150px;
+	}
+	/*-------------*/
+	
+  </style>
+ </head>
+ <body>
+	<!--顶部标题-->
+	<div class="title">
+		<h1 class="center">欢迎新同学！</h1>
+	</div>
+	<!--溢出：可添加js实现轮播图效果-->
+	<div class="container">
+	<div class="nav " id="nav">	
+		<div class="">1</div>
+		<div class="">2</div>
+		<div class="">3</div>
+		<div class="">2</div>
+
+	</div>
+	</div>
+	<hr>
+	<!--音频-->
+	<embed height="50" width="100" src="https://www.w3cschool.cn/statics/demosource/horse.mp3">
+	&nbsp;&nbsp;
+	<!--视频-->
+	<video width="320" height="240" controls autoplay>
+  <source src="https://www.w3cschool.cn/statics/demosource/movie.ogg" type="video/ogg">
+  <source src="https://www.w3cschool.cn/statics/demosource/movie.mp4" type="video/mp4">
+  <source src="https://www.w3cschool.cn/statics/demosource/movie.webm" type="video/webm">
+  <object data="https://www.w3cschool.cn/statics/demosource/movie.swf" width="320" height="240">
+    <embed width="320" height="240" src="/statics/demosource/movie.swf">
+  </object>
+</video>
+
+<img src="https://www.w3cschool.cn/statics/images/course/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+&nbsp;&nbsp;
+	<!--图片-->
+	<p>点击太阳或其他行星，注意变化：</p>
+	<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" target="_blank" alt="Sun" href="https://www.w3cschool.cn/statics/images/course/sun.gif">
+  <area shape="circle" coords="90,58,3" target="_blank" alt="Mercury" href="https://www.w3cschool.cn/statics/images/course/merglobe.gif">
+  <area shape="circle" coords="124,58,8" target="_blank" alt="Venus" href="https://www.w3cschool.cn/statics/images/course/venglobe.gif">
+	
+	
+ </body>
+</html>
