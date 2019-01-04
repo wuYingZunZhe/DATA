@@ -1,0 +1,34 @@
+app count count elements network
+ elements console sources networ
+ k tiaojianyuju v-show v-show co 
+unt count el vue vau app=new vue
+({el:"#app"},libiaoxuanran )cun x
+unhuan v-for v-if v-for gaojieyon
+gfa gaojieyonfa v-for liebiao lis
+t new vue item list msg head xunhu
+an bianli list item item list item
+ src app charset charset xunhuan m
+sg new vue el app data msg list el
+ements html concons hello vue item
+ name sources network element netw 
+ork element item age iteman name age
+ msg lisg item name v-if item ag item
+ age msg list name msg data xianmudao
+ru xian v-show min max time mark css s
+tyle link important reset submit checkb
+ox radio maxlength text disabled text p
+assword maxlength radio checkbox submit 
+reset button label option select valign b
+order name input value name min time mark
+ csss style impurtan t important class lin
+k visited hover active foce focus em rg ov
+erflow hidden border radius border auto ov
+erflow hiddern hiddern fleldet legend lege
+nd legend summary summary meter link class 
+visited hover active focus focus em rgb ove
+rflow hiddern hidden auto
+det font size font wi fam styl ite m mi fon
+t 
+shoudonhuanhan storange parse readf ie
+ creeserver crteserver npm install mysq mysqu 
+store prose npm ccccccccc ddddddddddddddddddd
