@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="cn">
+ <head>
+  <meta charset="UTF-8">
+  <title>猜数字</title>
+  <style>
+	body{
+		color:red;
+		background-color:#ddd;
+		font-size:50px;
+	}
+	input{
+		width:200px;
+		height:30px
+	}
+	button{
+		width:100px;
+		height:30px;
+		background-color:#678;		
+	}
+	p{
+		text-align:center;
+	}
+	
+  </style>
+ </head>
+ <body>
+<p id="c">猜测随机生成的数字！</p>
+  数字范围(最大值)：
+<input type="text" id="a" >
+
+<p><button type="button" id="su" onClick="num()">开始游戏</button></p>
+
+<script>
+	var step=0;
+	var times=0;
+	var end=0;
+	function setTime(){
+	var Time=setInterval(function(){
+			++times;
+			console.log(times);
+		if (end)
+		{
+			window.clearInterval(Time);			
+		}
+	},1000)
+	}
+	setTime()
+	function num(){
+		var range=document.getElementById("a").value;
+		var num=Math.ceil(Math.random()*range);
+		var c=document.getElementById("c");
+		c.innerHTML="猜测随机生成的数字！";
+		//document.getElementById("a").value="";
+		step=0;
+		//times=0;
+		end=false;
+		if (confirm("是否开始猜数字游戏！"))
+		{
+		console.log(num)
+		while(true){
+		++step;	
+		
+		var my_num=prompt(`请输入0~${range}之间的数字！`)
+		
+		if (my_num>num)
+		{
+			alert("太大了！");
+		}
+		if(my_num<num)
+		{
+			alert("太小了！");
+		}
+		if(my_num==num)
+		{
+			end=true;
+			c.innerHTML=`
+						正确数字是：${my_num};<br>
+						共猜测：${step}次;<br>
+						用时：${times}秒;<br>
+						分数：${100-step*5-times}分;
+						`;
+			//c.innerHTML="正确数字是："+my_num+"<br>"+",用时："+times+"秒,共猜测"+step+"次！";
+			console.log(my_num,times,step)
+			times=0;
+			setTime();
+			break;
+		}
+	 }		
+	}
+	}
+
+</script>
+
+ </body>
+</html>
