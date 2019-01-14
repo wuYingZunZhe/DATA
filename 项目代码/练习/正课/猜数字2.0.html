@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="cn">
+ <head>
+  <meta charset="UTF-8">
+  <title>猜数字</title>
+  <style>
+	body{
+		color:red;
+		background-color:#ddd;
+		font-size:50px;
+	}
+	input{
+		width:200px;
+		height:30px
+	}
+	button{
+		width:100px;
+		height:30px;
+		background-color:#678;		
+	}
+	p{
+		text-align:center;
+	}
+	div{
+		color:#000;
+		font-size:30px;
+	}
+	#d{
+		float:right;
+		margin-top:200px;
+	}
+  </style>
+ </head>
+ <body>
+<p id="c">猜测随机生成的数字！</p>
+  数字位数(默认3)：
+<input type="text" id="a" >
+<p><button type="button" id="su" onClick="start()">开始游戏</button></p>
+<div >游戏规则：请选择游戏难度,系统会随机生成一个n位数的数字，在弹出框中输入一个n位数的数字，根据提示调整数字和顺序，直到猜对为止！</div>
+
+<div id="d"></div>
+<script>
+	//封装局部函数变量
+	var times=0;
+	var end=0;
+	var str="";
+	//启动定时器(异步执行,弹出框阻止程序执行未解决！);
+	setTime()
+/***************************创建事件函数********************************/
+function start(){	
+	//声明局部变量
+		var mes=[];
+		var user_Arr=[];
+		var new_Arr=[];
+		var step=0;
+		//var end=0;
+		//var times=0;
+		//var str="";		
+		
+		//动态改变页面p元素内容;
+		c.innerHTML="猜测随机生成的数字！";		
+		//获取用户输入数字,将数据保存在数组
+		if(a.value==""){
+			a.value=3;
+		}			
+		//调用浏览器提示框开始游戏;
+		if (confirm("是否开始猜数字游戏！")){
+			//调整计时器；
+			//times=0
+			//调用随机数组函数，生成新数组new_Arr;
+			new_Arr=sui_Arr(a.value);			
+			while(true){
+			//step记步数;
+			++step;				
+			//获取用户输入数字,将数据保存在数组	
+			console.log("随机数组是："+new_Arr);
+
+			//提示信息；
+			if(step<2){
+				str=prompt(`请输入0~9之间的数字！`);
+			}else{
+				str=prompt(`
+					提示：
+						个数正确：${mes[0]};
+						顺序正确：${mes[1]};						
+						`)
+			}
+			//调用字符串切割函数，将用户输入的数字保存在数组
+			
+			user_Arr=spl(str);
+			//调用数组比较函数,
+			mes=Bi_Arr(new_Arr,user_Arr);			
+			//动态改变页面p元素内容;
+			c.innerHTML=`
+				恭喜,猜对了！
+						正确数字：${str};<br>
+						共猜测：${step}次;<br>
+						用时：${times}秒;<br>
+						分数：${100-step*2-times*0.1}分;
+						`;
+			//如果猜对，则游戏结束；
+			if(mes[2]){
+				//重启计时器；
+				end=true;
+				times=0;
+				setTime();
+				break;
+			}			
+			}
+		}else{//取消游戏
+			//重启计时器；
+			end=true;
+			times=0;
+			setTime();			
+		}
+	}
+/****************************创建功能函数*******************************/
+//创建计时器函数
+function setTime(){
+	
+	var Time=setInterval(function(){		
+			++times;
+			console.log(times);
+			d.innerHTML=`记时：${times}`
+		if (end)
+		{
+			window.clearInterval(Time);	
+			
+		}
+	},1000);
+	
+}
+
+
+//创建数组比较函数,返回正确个数，和正确位数;	
+function Bi_Arr(arr1,arr2){		
+		var wei_num=0;
+		var ge_num=0;
+		var end=false;
+		
+		//遍历对比两个数组
+		for(var i in arr1){
+			if(arr1[i]==arr2[i]){
+				ge_num++;
+				}
+			for (var j in arr2){
+				if(arr1[i]==arr2[j]){				
+					++wei_num;					
+					break;
+				}				
+			}
+		}
+		if (ge_num==arr1.length){
+			end=true;
+		}
+		console.log(ge_num,wei_num,end)
+		//返回比较结果,正确数字个数,真确位数个数,是否全正确；
+		return [ge_num,wei_num,end];
+}
+
+//创建随机数组函数，保存生成随机数组；
+function sui_Arr(a=3){
+	var My_Arr=[0,1,2,3,4,5,6,7,8,9]
+	//var a=3;
+	var sui_num=0;
+	var new_Arr=[];
+	for (var i=0;i<a;i++){
+		sui_num=Math.floor(Math.random()*My_Arr.length);
+		sui_num==0 ? sui_num=5 : sui_num; 
+		new_Arr[new_Arr.length]=sui_num;		
+	}	
+	return new_Arr;
+}
+
+//创建切割字符串函数，将结果保存为数组；
+function spl(str){
+		//var str="abcdef";
+		
+		var arr=[]
+		for (var i=0;i<str.length;i++ ){
+			arr[i]=str[i];			
+		}
+		console.log(arr)
+		return arr;
+	}
+
+</script>
+
+ </body>
+</html>
