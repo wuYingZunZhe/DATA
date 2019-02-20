@@ -1,0 +1,60 @@
+.my_toplogin{
+  font-size:1.2rem;
+  color:black;
+  font-family:"黑体";
+  font-weight:500;
+}
+.my_width{
+  width:20%;
+  line-height:2rem;
+}
+.my_li_width{
+  width:80%;
+}
+.my_ul_width{
+  width:80%;
+  margin:1px auto;
+}
+.my_div_width{
+  width:80%;
+}
+.my_a_width{
+  width:30%;
+}
+.my_height{
+  height:2rem;
+}
+.my_margin{
+  margin:5rem 0rem 5rem 12rem;
+}
+
+
+/* 获取焦点时样式 */
+.vali_info{
+	display:none;
+}
+.txt_focus{
+	border-top:2px solid black;
+	border-left:2px solid black;
+}
+
+/* 失去焦点时样式 */
+.vali_success,.vali_fail{
+	background-repeat:no-repeat;
+  background-position:left center;
+	display:block;
+}
+.vali_success{
+  background-image:url("../img/ok.png");
+	padding-left:20px;
+	width:0px;height:20px;
+	overflow:hidden;
+}
+.vali_fail{
+  background-image:url("../img/err.png");
+  border:1px solid red;
+  background-color:#ddd;
+  color:Red;
+  padding-left:30px;
+}
+/* 点击提交时样式 */  

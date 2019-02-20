@@ -1,0 +1,27 @@
+body{
+    margin:0;padding:0
+}
+.breadcrumb-item + .breadcrumb-item::before{
+    content:">";
+}
+.my_small{
+    font-size:0.5rem;
+}
+.productDetailName {
+    font: 700 18px 'Century Gothic','微軟正黑體';
+    color: #8C0024;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+.productDetailNameEn {
+    font: 400 14px 'Century Gothic','微軟正黑體';
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: #666;
+}
+.productDetailNameEn>.fontEn {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 0 5px;
+    color: #f2b725;
+}
