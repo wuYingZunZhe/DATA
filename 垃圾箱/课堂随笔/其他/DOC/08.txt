@@ -1,0 +1,11 @@
+zhendui cli minlianahag quan npm jiaocheng vue shuju cli shuju jiekou ceshi cli npm paw login paw paw ce create new xiangmu post delete url jiegkou shujujikou shujujiekou shujujiekou cesi hefentianqi konzhitai denlu zhuce renzhen key zhenhi hefengtianqi hefentianqi ruheshiyonvue shiyon yinbao chauji duixin shilihaduixin shilihaduixin new vue gouzaihanshi vue options options option dixn shilihansixin el bansin app el xuanzaiqqi shilhaduixin shilihaduix bandinganyuanshi option data data data gaouzai hanshi funxion zujian gangouzaihansi duixin key value keyvalue template template you el app data xuan yran xanren chazhiyufa chazhiyufa xhazhi yufa chazhiyufa shandakuaha shaudakuahao vue shejichuczho jiandanyunsuan bianlianmin bianlain chazhiyufa zhifubiadashiyunsuan if else biadanshi zhilixnton zhilixnton zhildom shuju anzhilixnton xuanren shitu xuanv-text text shuadakuaihahazhi innertext text bandindegenyuasu html innerhrm funco innerhtml shejichuzhin jiadan yunsuan inner if shoe show chazhiyufa zifuchan vue appendchid false retruen rever show show model zhiin lishi zi luyou if show shou konzhidom xanshiyincan fo suzu libian duixin qufor vo item arrs shuju shujzu biali for dayuif show show mobanyufachazhi mobanyufachazhi mobanyfachazhi mobanyufachazhi luoji panduanyuji panduanyufanfamin fanfamin fanfamin bixuzai mehods shemmingeifanfa onyuanshejs bind model yuashbiaoqan she biaqianzideyuaseshuxin shuxn yuanshishuxin yuanshishuxin zidinyishixin zidianyishxin zujain zidanyishxn bnd data data data vue vue danxinshijibandin vue danxianshijundan model model biaodanonjin biaodan get qing div qingdiv box button id 
+get jiazai get w
+window.onload=function(){
+	var vm =new Vue({
+	el:'#box',
+	data:{msg:'hello world'}
+}),
+	methods:{
+	get:function
+}
+}
