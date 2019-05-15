@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>像素转换</title>
+  <style type="text/css">
+	#text{width:50%;height:200px;}
+	#click(width:40%;height:500px;background:red;)
+  </style>
+ </head>
+ <body>
+  <input type="text" value="" onclick="" id="text">
+  <input type="button" onclick="my_click()" value="开始" id="click">
+  <div id="conten" class="">
+	像素转换
+  </div>
+  <script>
+	function my_click(){
+		var A=text.value;
+		var B=750;
+		var C=A/B;
+		console.log(C);
+		conten.innerhtml=C;
+	}
+	click();
+  </script>
+ </body>
+</html>
